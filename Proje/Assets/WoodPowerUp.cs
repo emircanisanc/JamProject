@@ -6,7 +6,7 @@ public class WoodPowerUp : PowerUp
 {
     public override void Collect()
     {
-        // ADD WOOD
+        Indicators.Instance.UpdateSliders(0, 10f);
         base.Collect();
     }
 }
