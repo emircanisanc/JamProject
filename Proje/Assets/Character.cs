@@ -52,7 +52,7 @@ public class Character : MonoBehaviour
     {
         if (isGrounded)
         {
-            if (Input.GetButtonDown("Jump") && Time.time >= nextJumpTime)
+            if (Input.GetButtonDown("Vertical") && Time.time >= nextJumpTime)
             {
                 nextJumpTime = Time.time + 1f;
                 rb2d.AddForce(Vector2.up * jumpForce);

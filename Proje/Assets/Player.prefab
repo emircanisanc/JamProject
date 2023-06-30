@@ -43,9 +43,11 @@ GameObject:
   - component: {fileID: 8543629094028304413}
   - component: {fileID: 8543629094028304414}
   - component: {fileID: 8543629094028304415}
+  - component: {fileID: 210453580453393489}
+  - component: {fileID: 2054431209}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,6 +125,34 @@ MonoBehaviour:
     m_Bits: 64
   moveSpeed: 3
   jumpForce: 300
+--- !u!114 &210453580453393489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8543629094028304408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11aaefa37a3885c48a9db424d0a1b6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2054431209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8543629094028304408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb588882e85da15419989bbb9e8cfee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactButtonName: Interact
+  interactLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &8543629095177763848
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,21 +13,26 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Door.OnDoorEntered += WinGame;
+        PlayerManager.OnPlayerDie += LoseGame;
+        Time.timeScale = 1f;
     }
 
     void OnDisable()
     {
         Door.OnDoorEntered -= WinGame;
+        PlayerManager.OnPlayerDie -= LoseGame;
     }
 
     private void WinGame()
     {
         OnGameWin?.Invoke();
+        Time.timeScale = 0f;
     }
 
     private void LoseGame()
     {
         OnGameLose?.Invoke();
+        Time.timeScale = 0f;
     }
 
 }
