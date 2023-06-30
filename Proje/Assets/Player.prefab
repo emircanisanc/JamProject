@@ -166,7 +166,7 @@ Transform:
   m_GameObject: {fileID: 8543629094028304408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.17, y: 0.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8728205895729308494}
@@ -229,8 +229,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   animator: {fileID: 753683410799452991}
-  moveSpeed: 3
-  jumpForce: 300
+  moveSpeed: 1.2
+  jumpForce: 125
 --- !u!114 &210453580453393489
 MonoBehaviour:
   m_ObjectHideFlags: 0
