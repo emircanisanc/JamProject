@@ -5,23 +5,29 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    public static Action OnGameEnd;
+    public static Action OnGameWin;
+    public static Action OnGameLose;
 
     public float levelEndDuration = 2f;
 
     void Awake()
     {
-        Door.OnDoorEntered += EndGame;
+        Door.OnDoorEntered += WinGame;
     }
 
     void OnDisable()
     {
-        Door.OnDoorEntered -= EndGame;
+        Door.OnDoorEntered -= WinGame;
     }
-    
-    private void EndGame()
+
+    private void WinGame()
     {
-        OnGameEnd?.Invoke();
+        OnGameWin?.Invoke();
+    }
+
+    private void LoseGame()
+    {
+        OnGameLose?.Invoke();
     }
 
 }
