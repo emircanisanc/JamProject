@@ -232,7 +232,7 @@ MonoBehaviour:
     m_Bits: 64
   animator: {fileID: 753683410799452991}
   moveSpeed: 1.2
-  jumpForce: 125
+  jumpForce: 170
 --- !u!114 &210453580453393489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultWood: -0.8
-  burningCoal: -2
+  burningCoal: -20
   burningWood: -0.2
 --- !u!114 &2054431209
 MonoBehaviour:

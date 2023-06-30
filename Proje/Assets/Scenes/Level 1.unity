@@ -3194,18 +3194,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 476421585009857660, guid: 9d793ee0ee002d241bc1a0f3bc59a6f9, type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476421585009857660, guid: 9d793ee0ee002d241bc1a0f3bc59a6f9, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4095133498308107541, guid: 9d793ee0ee002d241bc1a0f3bc59a6f9, type: 3}
-      propertyPath: burningCoal
-      value: -20
-      objectReference: {fileID: 0}
     - target: {fileID: 8543629094028304408, guid: 9d793ee0ee002d241bc1a0f3bc59a6f9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3253,10 +3241,6 @@ PrefabInstance:
     - target: {fileID: 8543629094028304412, guid: 9d793ee0ee002d241bc1a0f3bc59a6f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8543629094028304415, guid: 9d793ee0ee002d241bc1a0f3bc59a6f9, type: 3}
-      propertyPath: jumpForce
-      value: 170
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d793ee0ee002d241bc1a0f3bc59a6f9, type: 3}
