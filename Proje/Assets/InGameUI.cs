@@ -34,7 +34,8 @@ public class InGameUI : MonoBehaviour
     public void LoadNextLevel()
     {
         int activeLevel = Int32.Parse(SceneManager.GetActiveScene().name.Split(" ")[1]);
-        SceneManager.LoadScene("Level "+ activeLevel + 1);
+        activeLevel = activeLevel + 1;
+        SceneManager.LoadScene("Level "+ activeLevel);
     }
 
     public void RestartLevel()
