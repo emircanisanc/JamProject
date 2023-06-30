@@ -44,16 +44,10 @@ public class Indicators : MonoBehaviour
             currentWood = Mathf.Clamp(currentWood, 0, 100);
 
         lightSlider.value = currentCoal / maxCoal;
-        heightSlider.value = currentWood / maxWood;
     }
 
     public float LightPower()
     {
         return currentCoal / maxCoal * lightPowerMultiplier;
-    }
-
-    public float HeightPower()
-    {
-        return currentWood / maxWood * heightDecreaseMultiplier;
     }
 }
