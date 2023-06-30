@@ -10,8 +10,16 @@ public class GameManager : MonoBehaviour
 
     public float levelEndDuration = 2f;
 
+    public static GameManager Instance { get; private set; }
+
     void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+
+        else
+            Destroy(gameObject);
+
         Door.OnDoorEntered += WinGame;
         PlayerManager.OnPlayerDie += LoseGame;
         Time.timeScale = 1f;
@@ -34,5 +42,4 @@ public class GameManager : MonoBehaviour
         OnGameLose?.Invoke();
         Time.timeScale = 0f;
     }
-
 }
