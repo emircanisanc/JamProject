@@ -23,13 +23,13 @@ public class GameManager : MonoBehaviour
         PlayerManager.OnPlayerDie -= LoseGame;
     }
 
-    private void WinGame()
+    public void WinGame()
     {
         OnGameWin?.Invoke();
         Time.timeScale = 0f;
     }
 
-    private void LoseGame()
+    public void LoseGame()
     {
         OnGameLose?.Invoke();
         Time.timeScale = 0f;

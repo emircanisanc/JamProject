@@ -17,7 +17,9 @@ public class Indicators : MonoBehaviour
     [SerializeField] private float lightPowerMultiplier = 1f;
     [SerializeField] private float heightDecreaseMultiplier = 1f;
 
-
+    [SerializeField] private GameManager instance;
+    
+    
     private void Awake()
     {
         if (Instance == null)
@@ -43,6 +45,11 @@ public class Indicators : MonoBehaviour
         if (currentWood > 100 || currentWood < 0)
             currentWood = Mathf.Clamp(currentWood, 0, 100);
 
+
+        if (currentCoal <= 0)
+        {
+            instance.LoseGame();
+        }
         lightSlider.value = currentCoal / maxCoal;
     }
 
