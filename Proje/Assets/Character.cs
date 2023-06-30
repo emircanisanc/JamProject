@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Transform groundCheckTransform;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] Animator animator;
 
     Rigidbody2D rb2d;
     bool isGrounded;
@@ -25,6 +26,9 @@ public class Character : MonoBehaviour
         GroundCheck();
         HandleJump();
         HandleHorizontalMovement();
+
+        if (rb2d.velocity.y < 0)
+            animator.SetBool("Jump", false);
     }
 
     private void HandleHorizontalMovement()
@@ -32,6 +36,7 @@ public class Character : MonoBehaviour
         var x = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(x * moveSpeed, rb2d.velocity.y);
         rb2d.velocity = movement;
+        animator.SetBool("isRunning", x != 0);
         HandleSpriteFlip(movement);
     }
 
@@ -46,6 +51,7 @@ public class Character : MonoBehaviour
     private void GroundCheck()
     {
         isGrounded = Physics2D.Raycast(groundCheckTransform.position, Vector3.down, 0.3f, groundLayer);
+        animator.SetBool("isGrounded", isGrounded);
     }
 
     private void HandleJump()
@@ -54,6 +60,7 @@ public class Character : MonoBehaviour
         {
             if (Input.GetButtonDown("Vertical") && Time.time >= nextJumpTime)
             {
+                animator.SetBool("Jump", true);
                 nextJumpTime = Time.time + 1f;
                 rb2d.AddForce(Vector2.up * jumpForce);
             }

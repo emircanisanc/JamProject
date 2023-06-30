@@ -584,10 +584,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 383564993358824447, guid: a4d51b8df95db5449b0a7c4a981fee23, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 383564993358824447, guid: a4d51b8df95db5449b0a7c4a981fee23, type: 3}
       propertyPath: mechanics.Array.size
       value: 1
       objectReference: {fileID: 0}
